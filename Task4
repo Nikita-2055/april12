@@ -1,0 +1,19 @@
+#include<stdio.h>
+void count_vowels_and_consonants(const char *str, int *vowels, int *consonants){
+    for(int i = 0; str[i] != '\0'; ++i){
+        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
+           (*vowels)++;
+        }else{
+            (*consonants)++;
+        }
+    }
+    printf("vowels = %d, consonants = %d\n",*vowels,*consonants);
+    return ;
+}
+int main(){
+    char str[] = "hello";
+    int vowels = 0;
+    int consonants = 0;
+    count_vowels_and_consonants(str,&vowels,&consonants);
+    return 0; 
+}
