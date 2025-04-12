@@ -1,0 +1,16 @@
+#include<stdio.h>
+int find_character(const char *str, char c){
+    for(int i = 0; str[i] != '\0'; ++i){
+        if(str[i] == c){
+            return i;
+        }
+    }
+    return -1;
+}
+int main(){
+    char str[] = "h-el-o";
+    char c = '-';
+    int res = find_character(str,c);
+    printf("result: %d\n",res);
+    return 0;
+}
