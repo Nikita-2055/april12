@@ -1,0 +1,14 @@
+#include<stdio.h>
+int string_length(const char *str){
+    int count = 0;
+    for(int i = 0; str[i] != '\0'; ++i){
+        count++;
+    }
+    return count;
+}
+int main(){
+    const char str[] = "hello";
+    int res = string_length(str);
+    printf("result: %d\n",res);
+    return 0;
+}
