@@ -1,0 +1,23 @@
+#include<stdio.h>
+int compare_strings(const char *str1, const char *str2){
+    int count = 0;
+    int count1 = 0;
+    for(int i = 0; str1[i] != '\0'; ++i){
+        count++;
+    }
+    for(int i = 0; str2[i] != '\0'; ++i){
+        count1++;
+    }
+    if(count != count1){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+int main(){
+    char str1[] = "hello";
+    char str2[] = "hello";
+    int res = compare_strings(str1,str2);
+    printf("result: %d\n",res);
+    return 0;
+}
