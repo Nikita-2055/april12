@@ -1,0 +1,17 @@
+#include<stdio.h>
+void replace_character(char *str, char old_char, char new_char){
+    for(int i = 0; str[i] != '\0'; ++i){
+        if(str[i] == old_char){
+            str[i] = new_char;
+        }
+        printf("%c",str[i]);
+    }
+    return ;
+}
+int main(){
+    char str[] = "h-el-lo";
+    char old_char = '-';
+    char new_char = '^';
+    replace_character(str,old_char,new_char);
+    return 0;
+}
