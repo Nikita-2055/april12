@@ -1,0 +1,13 @@
+#include<stdio.h>
+void reverse_string(char *str){
+    int count = sizeof(str) - 2;
+    for(int i = count; i  != -1; --i ){
+        printf("%c",str[i]);
+    }
+    return ;
+}
+int main(){
+    char str[] = "hello";
+    reverse_string(str);
+    return 0;
+}
